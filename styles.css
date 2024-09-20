@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
@@ -126,4 +127,85 @@ button:hover {
 
 .modal button:hover {
     background-color: #0056b3;
+}
+
+/* Mobile Optimization */
+@media only screen and (max-width: 768px) {
+    .game-board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 10px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .status {
+        font-size: 1rem;
+    }
+
+    .modal {
+        padding: 20px 30px;
+    }
+
+    .modal h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .game-board {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+        gap: 8px;
+    }
+
+    .cell {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .status {
+        font-size: 0.9rem;
+    }
+
+    .modal {
+        padding: 15px 20px;
+    }
+
+    .modal h2 {
+        font-size: 1.3rem;
+    }
+
+    .modal button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
 }
